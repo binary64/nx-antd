@@ -26,19 +26,21 @@
       }
     ]
   },
-  "projects": {
-    "nlib": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
     },
-    "ui": {
-      "tags": []
-    },
-    "web": {
-      "tags": []
-    },
-    "web-e2e": {
-      "tags": [],
-      "implicitDependencies": ["web"]
+    "@nrwl/next": {
+      "application": {
+        "style": "less",
+        "linter": "eslint"
+      }
     }
-  }
+  },
+  "defaultProject": "web"
 }

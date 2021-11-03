@@ -20,7 +20,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "ui": {
       "root": "libs/ui",
@@ -42,7 +43,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "web": {
       "root": "apps/web",
@@ -94,7 +96,8 @@
             "lintFilePatterns": ["apps/web/**/*.{ts,tsx,js,jsx}"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "web-e2e": {
       "root": "apps/web-e2e",
@@ -121,24 +124,9 @@
             "lintFilePatterns": ["apps/web-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["web"]
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "less",
-        "linter": "eslint"
-      }
-    }
-  },
-  "defaultProject": "web"
+  }
 }
