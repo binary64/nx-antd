@@ -1,6 +1,27 @@
 {
   "version": 2,
   "projects": {
+    "nlib": {
+      "root": "libs/nlib",
+      "sourceRoot": "libs/nlib/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/nlib/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/nlib"],
+          "options": {
+            "jestConfig": "libs/nlib/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "ui": {
       "root": "libs/ui",
       "sourceRoot": "libs/ui/src",

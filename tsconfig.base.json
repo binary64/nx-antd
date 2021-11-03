@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-antd/nlib": ["libs/nlib/src/index.ts"],
       "@nx-antd/ui": ["libs/ui/src/index.ts"]
     }
   },
