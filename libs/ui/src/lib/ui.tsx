@@ -7,7 +7,7 @@ export interface UiProps {}
 
 export function Ui(props: UiProps) {
   return <>
-    <img src={testImg.src} />
+    <img src={(testImg as any).src} />
     <div className={styles.pic} />
     <div className={styles.nasa} />
     <div className={styles.camelCase}>local camelcase</div>
