@@ -46,7 +46,7 @@ module.exports = withPlugins(
   ],
   {
     images: {
-      disableStaticImages: true,
+      // disableStaticImages: true,
     },
     webpack(config) {
       console.log('coinfiuguyring webpack', config.module.rules[2]);
