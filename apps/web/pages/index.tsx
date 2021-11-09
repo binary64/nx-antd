@@ -8,6 +8,7 @@ export function Index() {
       <h2>nx-antd</h2>
       <Ui />
       <Button type='primary'>regular</Button>
+      
     </div>
   );
 }
