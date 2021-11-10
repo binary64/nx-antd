@@ -49,14 +49,16 @@ module.exports = withPlugins(
       // disableStaticImages: true,
     },
     webpack(config) {
-      console.log('coinfiuguyring webpack', config.module.rules[2]);
-      // config.module.rules.unshift({
-      //   test: /\.(png|jpg)$/,
-      //   loader: 'url-loader',
-      //   options: {
-      //     limit: 100,
-      //   },
-      // });
+      config.module.rules.forEach((e) => {
+        if (e.oneOf) {
+          e.oneOf.forEach((e) => {
+            if (/\.less/.test(e.test?.toString())) {
+              if ('modules' in e.use[0].options)
+                e.use[0].options.modules.exportLocalsConvention = 'camelCase';
+            }
+          });
+        }
+      });
       return config;
     },
   }
